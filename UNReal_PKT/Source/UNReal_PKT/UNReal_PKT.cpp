@@ -3,4 +3,4 @@
 #include "UNReal_PKT.h"
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, UNReal_PKT, "UNReal_PKT" );
+IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, UNReal_PKT, "UNReal_PKT");
