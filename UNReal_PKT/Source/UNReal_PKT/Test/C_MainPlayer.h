@@ -4,8 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "C_MainPlayer.generated.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
+#include "Components/ArrowComponent.h"
 
+
+#include "C_MainPlayer.generated.h"
 UCLASS()
 class UNREAL_PKT_API AC_MainPlayer : public ACharacter
 {
@@ -26,4 +30,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+private:
+	UPROPERTY(Category = "Contents", VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"));
+	class UCameraComponent* PlayerMainCam = nullptr;
+	UPROPERTY(Category = "Contents", VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"));
+	class USpringArmComponent* PlayerCamSpringArm = nullptr;
+	
 };
